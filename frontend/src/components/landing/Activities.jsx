@@ -11,7 +11,7 @@ const activities = [
   {
     id: "diving",
     title: "Penyelaman",
-    desc: "Selami terumbu karang Pulau Selayar dan Taka Bonerate yang masih perawan.",
+    desc: "Selami 750+ spesies terumbu karang Wakatobi yang masih perawan.",
     Icon: Waves,
     count: "32 spot",
   },
@@ -25,7 +25,7 @@ const activities = [
   {
     id: "hotel",
     title: "Penginapan",
-    desc: "Dari resort tepi pantai hingga homestay pulau yang otentik.",
+    desc: "Dari resort tepi pantai hingga homestay pulau yang otentik di Wakatobi.",
     Icon: Hotel,
     count: "60+ properti",
   },

@@ -93,8 +93,9 @@ export const Footer = () => {
               <span className="font-serif text-2xl tracking-tight">BahariTrip</span>
             </a>
             <p className="text-sm text-white/60 leading-relaxed max-w-sm">
-              Platform booking wisata bahari resmi Sulawesi Selatan — menghubungkan
-              wisatawan dengan operator lokal terpercaya sejak 2024.
+              Platform booking wisata bahari Indonesia — saat ini fokus di
+              Wakatobi, Sulawesi Tenggara. Menghubungkan wisatawan nasional
+              dengan operator lokal terpercaya sejak 2024.
             </p>
             <div className="flex items-center gap-3 mt-6">
               {[
@@ -141,8 +142,8 @@ export const Footer = () => {
               Hubungi
             </h5>
             <p className="text-sm text-white/85 leading-relaxed">
-              Jl. Penghibur No. 12<br />
-              Makassar 90111<br />
+              Wangi-Wangi, Wakatobi<br />
+              Sulawesi Tenggara 93791<br />
               <a href="mailto:halo@baharitrip.id" className="hover:text-[#E9D8A6] transition-colors">
                 halo@baharitrip.id
               </a>
@@ -160,7 +161,7 @@ export const Footer = () => {
           </h2>
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 mt-8 text-xs text-white/50">
             <p>© 2025 BahariTrip. Semua hak dilindungi.</p>
-            <p>Dibuat dengan rasa di Makassar, Sulawesi Selatan.</p>
+            <p>Dibuat dengan rasa di Wakatobi, Sulawesi Tenggara.</p>
           </div>
         </div>
       </div>

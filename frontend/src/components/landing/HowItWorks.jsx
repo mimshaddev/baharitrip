@@ -2,7 +2,7 @@ const steps = [
   {
     n: "01",
     title: "Pilih destinasi",
-    desc: "Telusuri Makassar, Spermonde, atau Taka Bonerate. Saring berdasarkan minat, durasi, dan anggaran Anda.",
+    desc: "Telusuri Wangi-Wangi, Kaledupa, Tomia, dan Binongko. Saring berdasarkan minat, durasi, dan anggaran Anda.",
   },
   {
     n: "02",

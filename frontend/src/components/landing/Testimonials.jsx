@@ -3,13 +3,13 @@ import { Quote } from "lucide-react";
 const reviews = [
   {
     quote:
-      "Pengalaman snorkeling di Spermonde benar-benar tak terlupakan. Operatornya ramah dan tahu spot terbaik.",
+      "Snorkeling di Hoga benar-benar tak terlupakan. Operatornya ramah dan tahu spot terbaik di Wakatobi.",
     name: "Ayu Pramudita",
     origin: "Jakarta",
   },
   {
     quote:
-      "Booking-nya gampang, harganya transparan. Tiga hari di Taka Bonerate jadi liburan terbaik tahun ini.",
+      "Booking-nya gampang, harganya transparan. Empat hari di Tomia jadi liburan terbaik tahun ini.",
     name: "Reza Mahendra",
     origin: "Bandung",
   },
@@ -27,7 +27,7 @@ const reviews = [
   },
   {
     quote:
-      "Dari Makassar ke Selayar terasa mulus berkat itinerary yang disusun BahariTrip. Semuanya tepat waktu.",
+      "Dari Kendari ke Wangi-Wangi terasa mulus berkat itinerary yang disusun BahariTrip. Semuanya tepat waktu.",
     name: "Daniswara",
     origin: "Yogyakarta",
   },

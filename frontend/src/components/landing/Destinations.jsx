@@ -2,28 +2,28 @@ import { ArrowUpRight } from "lucide-react";
 
 const destinations = [
   {
-    id: "makassar",
-    name: "Makassar",
-    tagline: "Gerbang kebudayaan Sulawesi",
-    img: "https://images.pexels.com/photos/25538280/pexels-photo-25538280.jpeg",
+    id: "wangi-wangi",
+    name: "Wangi-Wangi",
+    tagline: "Gerbang utama Taman Nasional Wakatobi",
+    img: "https://images.unsplash.com/photo-1691849793899-ac59a3bdc08d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwzfHx0cm9waWNhbCUyMGlzbGFuZCUyMG9jZWFuJTIwYWVyaWFsfGVufDB8fHx8MTc3NzU0MjA3N3ww&ixlib=rb-4.1.0&q=85",
     spots: 38,
     span: "md:col-span-8 md:row-span-2",
     height: "min-h-[420px] md:min-h-[640px]",
   },
   {
-    id: "spermonde",
-    name: "Kepulauan Spermonde",
-    tagline: "Surga island hopping",
-    img: "https://images.unsplash.com/photo-1691849793899-ac59a3bdc08d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwzfHx0cm9waWNhbCUyMGlzbGFuZCUyMG9jZWFuJTIwYWVyaWFsfGVufDB8fHx8MTc3NzU0MjA3N3ww&ixlib=rb-4.1.0&q=85",
+    id: "tomia",
+    name: "Tomia",
+    tagline: "Surga penyelaman kelas dunia",
+    img: "https://images.pexels.com/photos/13010777/pexels-photo-13010777.jpeg",
     spots: 42,
     span: "md:col-span-4",
     height: "min-h-[300px]",
   },
   {
-    id: "takabonerate",
-    name: "Taka Bonerate",
-    tagline: "Atol terbesar di Asia Tenggara",
-    img: "https://images.pexels.com/photos/13010777/pexels-photo-13010777.jpeg",
+    id: "hoga",
+    name: "Pulau Hoga",
+    tagline: "Stasiun riset bahari & snorkeling jernih",
+    img: "https://images.pexels.com/photos/8547164/pexels-photo-8547164.jpeg",
     spots: 26,
     span: "md:col-span-4",
     height: "min-h-[300px]",
@@ -44,13 +44,13 @@ export const Destinations = () => {
               Destinasi Unggulan
             </p>
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight text-[#0A1929]">
-              Surga tropis<br />
-              <span className="italic text-[#005F73]">menanti Anda.</span>
+              Empat pulau,<br />
+              <span className="italic text-[#005F73]">tak terbatas pesona.</span>
             </h2>
           </div>
           <p className="text-base sm:text-lg text-[#4B5A69] max-w-md leading-relaxed">
-            Tiga ekosistem laut yang berbeda — kota pelabuhan kuno, kepulauan
-            bertabur pasir putih, dan atol legendaris kelas dunia.
+            Wakatobi — singkatan Wangi-Wangi, Kaledupa, Tomia, dan Binongko.
+            Empat pulau utama dengan ekosistem terumbu karang terkaya di dunia.
           </p>
         </div>
 

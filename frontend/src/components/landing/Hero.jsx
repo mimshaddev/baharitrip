@@ -25,23 +25,23 @@ export const Hero = () => {
             data-testid="hero-overline"
             className="text-sm uppercase tracking-[0.3em] font-medium text-[#E9D8A6] mb-6"
           >
-            Sulawesi Selatan · Indonesia
+            Wakatobi · Sulawesi Tenggara
           </p>
           <h1
             data-testid="hero-headline"
             className="font-serif text-white text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tighter font-light"
           >
-            Jelajahi keajaiban{" "}
-            <span className="italic font-normal text-[#E9D8A6]">bahari</span>
+            Pintu menuju{" "}
+            <span className="italic font-normal text-[#E9D8A6]">jantung</span>
             <br />
-            Sulawesi Selatan.
+            Coral Triangle dunia.
           </h1>
           <p
             data-testid="hero-subtitle"
             className="mt-6 text-lg sm:text-xl text-white/85 max-w-xl leading-relaxed font-light"
           >
-            Pesan tur, penyelaman, dan penginapan eksklusif di Makassar,
-            Spermonde, dan Taka Bonerate — semua di satu tempat.
+            Pesan tur, penyelaman, dan penginapan terbaik di Wakatobi —
+            satu platform, untuk wisatawan dari seluruh Indonesia.
           </p>
         </div>
 

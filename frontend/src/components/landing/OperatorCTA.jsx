@@ -49,8 +49,9 @@ export const OperatorCTA = () => {
               <span className="italic text-[#E9D8A6]">bersama kami.</span>
             </h2>
             <p className="mt-6 text-lg text-white/75 leading-relaxed max-w-xl">
-              Bergabunglah dengan 85+ operator lokal yang mempercayakan reservasi
-              tur, dive trip, dan penginapan mereka kepada BahariTrip.
+              Bergabunglah dengan operator lokal Wakatobi yang mempercayakan
+              reservasi tur, dive trip, dan penginapan mereka kepada BahariTrip —
+              dan jangkau wisatawan dari seluruh Indonesia.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
