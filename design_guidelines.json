@@ -1,0 +1,195 @@
+{
+  "theme": "light",
+  "archetype": "1 (Organic & Earthy)",
+  "vibe": "Marine beauty, adventure, tranquility",
+  "target_audience": "Tourists, guests, local operators",
+  "language": "Bahasa Indonesia",
+  "typography": {
+    "fonts": [
+      {
+        "role": "heading",
+        "family": "Playfair Display",
+        "weight": "font-light to font-black",
+        "class": "font-serif",
+        "import_url": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      },
+      {
+        "role": "body",
+        "family": "Outfit",
+        "weight": "font-light to font-medium",
+        "class": "font-sans",
+        "import_url": "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap"
+      }
+    ],
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl lg:text-7xl tracking-tighter leading-none",
+      "h2": "text-4xl sm:text-5xl tracking-tight leading-tight",
+      "h3": "text-2xl sm:text-3xl tracking-tight",
+      "h4": "text-xl font-medium",
+      "body": "text-base sm:text-lg leading-relaxed text-slate-700",
+      "overline": "text-sm uppercase tracking-[0.2em] font-medium text-ocean-600"
+    }
+  },
+  "colors": {
+    "background": {
+      "default": "#FAF8F5",
+      "alt": "#F0EBE1",
+      "dark": "#0B1D2E"
+    },
+    "text": {
+      "primary": "#0A1929",
+      "secondary": "#4B5A69",
+      "inverse": "#FFFFFF",
+      "accent": "#007A8A"
+    },
+    "primary": {
+      "default": "#005F73",
+      "hover": "#0A9396",
+      "foreground": "#FFFFFF"
+    },
+    "accent": {
+      "coral": "#E05D36",
+      "sand": "#E9D8A6"
+    },
+    "border": "#E5DCC5"
+  },
+  "spacing_and_layout": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "section_padding": "py-20 md:py-32",
+    "generous_spacing": "gap-8 md:gap-16",
+    "grid_modes": {
+      "bento_destinations": "grid-cols-1 md:grid-cols-12 gap-6 md:gap-8",
+      "features": "grid-cols-1 md:grid-cols-3 gap-12"
+    },
+    "borders": "border border-[#E5DCC5]",
+    "radius": "rounded-2xl"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#005F73] text-white hover:bg-[#0A9396] transition-colors rounded-full px-8 py-4 font-medium",
+      "secondary": "bg-transparent border border-[#005F73] text-[#005F73] hover:bg-[#005F73] hover:text-white transition-colors rounded-full px-8 py-4 font-medium",
+      "accent": "bg-[#E05D36] text-white hover:bg-[#C94D29] transition-colors rounded-full px-8 py-4 font-medium"
+    },
+    "cards": {
+      "destination": "group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-shadow",
+      "feature": "p-8 rounded-2xl bg-white border border-[#E5DCC5]",
+      "glass": "backdrop-blur-xl bg-white/70 border border-white/40 shadow-sm rounded-2xl"
+    },
+    "navigation": {
+      "style": "crystal_glass",
+      "classes": "fixed top-0 w-full z-50 backdrop-blur-xl bg-white/80 border-b border-white/40 shadow-sm"
+    }
+  },
+  "media": {
+    "images": [
+      {
+        "category": "hero",
+        "url": "https://images.unsplash.com/photo-1755020475254-06790e2437b4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGlzbGFuZCUyMG9jZWFuJTIwYWVyaWFsfGVufDB8fHx8MTc3NzU0MjA3N3ww&ixlib=rb-4.1.0&q=85",
+        "description": "Aerial view of a sandy beach and turquoise ocean waves",
+        "alt_text": "Pemandangan udara pantai dan laut Sulawesi"
+      },
+      {
+        "category": "destination_makassar",
+        "url": "https://images.pexels.com/photos/25538280/pexels-photo-25538280.jpeg",
+        "description": "Beautiful sunset silhouette of the 99 Domes Mosque with reflection on the water in Makassar",
+        "alt_text": "Masjid 99 Kubah Makassar saat matahari terbenam"
+      },
+      {
+        "category": "activity_diving",
+        "url": "https://images.pexels.com/photos/10769610/pexels-photo-10769610.jpeg",
+        "description": "Professional diver exploring colorful coral reefs",
+        "alt_text": "Penyelaman terumbu karang di Sulawesi Selatan"
+      },
+      {
+        "category": "activity_hotel",
+        "url": "https://images.pexels.com/photos/8547164/pexels-photo-8547164.jpeg",
+        "description": "A tropical resort featuring a modern building and palm trees",
+        "alt_text": "Resor tropis dan penginapan di Sulawesi"
+      },
+      {
+        "category": "destination_spermonde",
+        "url": "https://images.unsplash.com/photo-1691849793899-ac59a3bdc08d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwzfHx0cm9waWNhbCUyMGlzbGFuZCUyMG9jZWFuJTIwYWVyaWFsfGVufDB8fHx8MTc3NzU0MjA3N3ww&ixlib=rb-4.1.0&q=85",
+        "description": "An island in the middle of the ocean",
+        "alt_text": "Kepulauan Spermonde dari udara"
+      },
+      {
+        "category": "destination_takabonerate",
+        "url": "https://images.pexels.com/photos/13010777/pexels-photo-13010777.jpeg",
+        "description": "Colorful coral reef underwater with fish",
+        "alt_text": "Taman Nasional Taka Bonerate"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "name": "Hero",
+      "description": "Full height (min-h-[80vh]) immersive section. Background image of tropical beach.",
+      "layout": "Flex column, centered content or left-aligned depending on image focal point. Add gradient overlay bg-black/40 to ensure text readability.",
+      "elements": [
+        "Headline (H1): 'Jelajahi Keajaiban Bahari Sulawesi Selatan'",
+        "Subheadline: 'Pesan tur, penyelaman, dan penginapan eksklusif di Makassar, Spermonde, dan Taka Bonerate.'",
+        "Search/CTA Bar: Glassmorphism bar with destination dropdown, date, and primary CTA button 'Cari Petualangan'"
+      ]
+    },
+    {
+      "name": "Destinasi Unggulan (Featured Destinations)",
+      "description": "Bento Grid layout displaying the top 3 regions.",
+      "layout": "Tetris Grid. 1 large card (Makassar) col-span-12 md:col-span-8 row-span-2. 2 smaller cards (Spermonde, Taka Bonerate).",
+      "elements": [
+        "Section Title: 'Surga Tropis Menanti Anda'",
+        "Destination Cards with background images, gradient overlay, and bottom-aligned text."
+      ]
+    },
+    {
+      "name": "Kategori Aktivitas (Activities)",
+      "description": "Horizontal scroll or 4-column grid for Tour, Diving, Snorkeling, Hotel.",
+      "layout": "Grid cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6.",
+      "elements": [
+        "Icons or small images for each category.",
+        "Minimalist card design with subtle hover lift (-translate-y-1)."
+      ]
+    },
+    {
+      "name": "Cara Kerja (How It Works)",
+      "description": "Step-by-step booking flow.",
+      "layout": "Grid cols-1 md:grid-cols-3 or flex column with connecting lines.",
+      "elements": [
+        "Steps: 1. Pilih Destinasi, 2. Pesan Aktivitas & Penginapan, 3. Nikmati Liburan.",
+        "Use generous padding (p-12) and large elegant numerals (font-serif text-6xl text-accent-coral/20)."
+      ]
+    },
+    {
+      "name": "Testimoni (Testimonials)",
+      "description": "Marquee strategy (The Editorial Ribbon).",
+      "layout": "Slow moving carousel of text reviews.",
+      "elements": [
+        "Text: Pale background (#F0EBE1), dark text. Very slow drift."
+      ]
+    },
+    {
+      "name": "Operator CTA (Partners)",
+      "description": "Section calling for local businesses to join.",
+      "layout": "Dark background (#0B1D2E) block for high contrast.",
+      "elements": [
+        "Title: 'Tingkatkan Bisnis Pariwisata Anda'",
+        "CTA Button: 'Bergabung Sebagai Mitra' (Accent Color)"
+      ]
+    },
+    {
+      "name": "Footer & Newsletter",
+      "description": "Massive footer with newsletter signup.",
+      "layout": "Grid layout. Massive 'BahariTrip' logo/text at the bottom.",
+      "elements": [
+        "Newsletter input: Shadcn input styled with rounded edges.",
+        "Links: Tentang Kami, Destinasi, Syarat & Ketentuan."
+      ]
+    }
+  ],
+  "technical_instructions": {
+    "icons": "Use @phosphor-icons/react (Duotone weight) for elegant travel vibe.",
+    "animations": "Use Framer Motion for scroll-triggered fades. Use Lenis for smooth scrolling.",
+    "accessibility": "Ensure all text over images has sufficient contrast or text-shadow. Use data-testid on all interactive elements (e.g., data-testid='cta-search-button').",
+    "html_tags": "Prefer native HTML elements with Tailwind classes for layout to maintain flexibility, use Shadcn for complex interactive components like DatePicker or Select.",
+    "shadcn_customization": "Roundness: rounded-2xl. Strip default borders on cards if using solid backgrounds. Avoid generic card components for the Bento Grid."
+  }
+}
