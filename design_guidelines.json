@@ -1,46 +1,19 @@
 {
-  "theme": "light",
-  "archetype": "1 (Organic & Earthy)",
-  "vibe": "Marine beauty, adventure, tranquility",
-  "target_audience": "Tourists, guests, local operators",
-  "language": "Bahasa Indonesia",
-  "typography": {
-    "fonts": [
-      {
-        "role": "heading",
-        "family": "Playfair Display",
-        "weight": "font-light to font-black",
-        "class": "font-serif",
-        "import_url": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      },
-      {
-        "role": "body",
-        "family": "Outfit",
-        "weight": "font-light to font-medium",
-        "class": "font-sans",
-        "import_url": "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap"
-      }
-    ],
-    "hierarchy": {
-      "h1": "text-5xl sm:text-6xl lg:text-7xl tracking-tighter leading-none",
-      "h2": "text-4xl sm:text-5xl tracking-tight leading-tight",
-      "h3": "text-2xl sm:text-3xl tracking-tight",
-      "h4": "text-xl font-medium",
-      "body": "text-base sm:text-lg leading-relaxed text-slate-700",
-      "overline": "text-sm uppercase tracking-[0.2em] font-medium text-ocean-600"
-    }
+  "theme": {
+    "archetype": "1 (Organic & Earthy)",
+    "mode": "Light",
+    "rationale": "Marine tourism booking platform requires a warm, trustworthy, and organic feel, adapting the landing page palette for dense data screens."
   },
   "colors": {
     "background": {
-      "default": "#FAF8F5",
+      "main": "#FAF8F5",
       "alt": "#F0EBE1",
-      "dark": "#0B1D2E"
+      "sidebar": "#0B1D2E"
     },
-    "text": {
-      "primary": "#0A1929",
-      "secondary": "#4B5A69",
-      "inverse": "#FFFFFF",
-      "accent": "#007A8A"
+    "surface": {
+      "card": "#FFFFFF",
+      "modal": "#FFFFFF",
+      "popover": "#FFFFFF"
     },
     "primary": {
       "default": "#005F73",
@@ -51,145 +24,124 @@
       "coral": "#E05D36",
       "sand": "#E9D8A6"
     },
-    "border": "#E5DCC5"
-  },
-  "spacing_and_layout": {
-    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
-    "section_padding": "py-20 md:py-32",
-    "generous_spacing": "gap-8 md:gap-16",
-    "grid_modes": {
-      "bento_destinations": "grid-cols-1 md:grid-cols-12 gap-6 md:gap-8",
-      "features": "grid-cols-1 md:grid-cols-3 gap-12"
+    "text": {
+      "primary": "#0A1929",
+      "secondary": "#0A1929",
+      "muted": "#64748B",
+      "inverse": "#FFFFFF"
     },
-    "borders": "border border-[#E5DCC5]",
-    "radius": "rounded-2xl"
-  },
-  "components": {
-    "buttons": {
-      "primary": "bg-[#005F73] text-white hover:bg-[#0A9396] transition-colors rounded-full px-8 py-4 font-medium",
-      "secondary": "bg-transparent border border-[#005F73] text-[#005F73] hover:bg-[#005F73] hover:text-white transition-colors rounded-full px-8 py-4 font-medium",
-      "accent": "bg-[#E05D36] text-white hover:bg-[#C94D29] transition-colors rounded-full px-8 py-4 font-medium"
+    "border": {
+      "default": "#E5DCC5",
+      "focus": "#005F73"
     },
-    "cards": {
-      "destination": "group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-shadow",
-      "feature": "p-8 rounded-2xl bg-white border border-[#E5DCC5]",
-      "glass": "backdrop-blur-xl bg-white/70 border border-white/40 shadow-sm rounded-2xl"
-    },
-    "navigation": {
-      "style": "crystal_glass",
-      "classes": "fixed top-0 w-full z-50 backdrop-blur-xl bg-white/80 border-b border-white/40 shadow-sm"
+    "status": {
+      "success": { "bg": "#E6F4F1", "text": "#005F73", "border": "#B3DCD5" },
+      "warning": { "bg": "#FDF6E3", "text": "#B35A00", "border": "#E9D8A6" },
+      "error": { "bg": "#FCEEEA", "text": "#E05D36", "border": "#F3C5B8" },
+      "info": { "bg": "#E6E9EC", "text": "#0B1D2E", "border": "#B0B9C2" }
     }
   },
-  "media": {
-    "images": [
+  "typography": {
+    "fonts": {
+      "heading": "Playfair Display",
+      "body": "Outfit"
+    },
+    "hierarchy": {
+      "page_title": "font-serif text-3xl md:text-4xl text-[#0B1D2E] tracking-tight",
+      "section_title": "font-serif text-xl md:text-2xl text-[#0A1929]",
+      "card_title": "font-sans font-semibold text-lg text-[#0A1929]",
+      "body": "font-sans text-base text-[#0A1929] leading-relaxed",
+      "table_header": "font-sans text-xs uppercase tracking-[0.1em] text-[#64748B] font-medium",
+      "data_label": "font-sans text-sm text-[#64748B]",
+      "data_value": "font-sans text-base font-medium text-[#0A1929]"
+    }
+  },
+  "layout": {
+    "container": "bg-[#FAF8F5] min-h-screen flex",
+    "sidebar": "w-64 bg-[#0B1D2E] text-white hidden md:flex flex-col border-r border-[#E5DCC5]/20",
+    "topbar": "h-16 bg-white border-b border-[#E5DCC5] flex items-center justify-between px-6 sticky top-0 z-40",
+    "main_content": "flex-1 p-4 md:p-8 space-y-6 overflow-y-auto",
+    "card_spacing": "p-6 md:p-8",
+    "grid": {
+      "kpi": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6",
+      "bento": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6"
+    }
+  },
+  "components": {
+    "kpi_card": "rounded-2xl border border-[#E5DCC5] bg-white p-6 shadow-sm hover:shadow-md transition-shadow",
+    "button": {
+      "primary": "bg-[#005F73] text-white hover:bg-[#0A9396] rounded-lg px-4 py-2 font-medium transition-colors",
+      "secondary": "bg-[#F0EBE1] text-[#0B1D2E] hover:bg-[#E5DCC5] rounded-lg px-4 py-2 font-medium transition-colors",
+      "outline": "border border-[#005F73] text-[#005F73] hover:bg-[#005F73]/5 rounded-lg px-4 py-2 font-medium transition-colors"
+    },
+    "inputs": "rounded-lg border border-[#E5DCC5] bg-[#FAF8F5] px-4 py-2 focus:ring-2 focus:ring-[#005F73] focus:border-transparent outline-none transition-all",
+    "table": {
+      "wrapper": "rounded-2xl border border-[#E5DCC5] bg-white overflow-hidden shadow-sm",
+      "header_row": "bg-[#FAF8F5] border-b border-[#E5DCC5]",
+      "row": "border-b border-[#E5DCC5] hover:bg-[#F0EBE1]/50 transition-colors",
+      "cell": "p-4 text-sm"
+    }
+  },
+  "shadcn_customizations": {
+    "Card": "Use rounded-2xl, border-[#E5DCC5], and shadow-sm instead of default border-border.",
+    "Table": "Override header font to Outfit, use uppercase with tracking, and set row hover to #F0EBE1/50. Ensure bottom borders are #E5DCC5.",
+    "Dialog": "Use rounded-2xl, backdrop-blur-sm, bg-white/95 border border-[#E5DCC5]. Headings must use Playfair Display.",
+    "DropdownMenu": "Use rounded-xl, border-[#E5DCC5], hover bg-[#F0EBE1].",
+    "Tabs": "Use rounded-lg bg-[#F0EBE1], data-[state=active]:bg-white data-[state=active]:text-[#005F73] data-[state=active]:shadow-sm",
+    "Badge": "Customize variants mapped to brand status colors (Success=Teal, Warning=Sand, Destructive=Coral, Default=Navy)"
+  },
+  "dashboards": {
+    "operator": {
+      "sidebar_links": ["Produk", "Jadwal", "Booking", "Pesan", "Statistik", "Pengaturan"],
+      "layout_notes": "Focus on daily operations. Large KPI cards for today's bookings. Bento grid for upcoming schedules and recent activity. Data tables for managing products and schedules.",
+      "key_views": ["Dashboard Overview (KPIs, Charts)", "Product List (Table with Images)", "Schedule Calendar (Grid)", "Booking Management (Filters)"]
+    },
+    "admin": {
+      "sidebar_links": ["Users", "Operators", "Products", "Bookings", "Payments", "Reports", "Ferry Schedules", "Settings"],
+      "layout_notes": "Data-heavy and oversight focused. Use wide tables with multiple filter columns (date ranges, status, operator). Charts for platform revenue.",
+      "key_views": ["Platform Overview (Revenue, Growth)", "Operator Approvals (Modal)", "All Bookings Table", "Payouts Dashboard"]
+    },
+    "customer": {
+      "topbar_links": ["My Bookings", "Reviews", "Wishlist", "Profile"],
+      "layout_notes": "Lighter, more editorial layout. Highlighting the marine experience. Grid of cards for bookings rather than strict tables. Image-heavy wishlist.",
+      "key_views": ["Booking Cards (Upcoming/Past)", "Wishlist Grid (Images)", "Profile Settings Form", "Review Modal"]
+    }
+  },
+  "media_urls": {
+    "empty_states": [
       {
-        "category": "hero",
-        "url": "https://images.unsplash.com/photo-1755020475254-06790e2437b4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGlzbGFuZCUyMG9jZWFuJTIwYWVyaWFsfGVufDB8fHx8MTc3NzU0MjA3N3ww&ixlib=rb-4.1.0&q=85",
-        "description": "Aerial view of a sandy beach and turquoise ocean waves",
-        "alt_text": "Pemandangan udara pantai dan laut Sulawesi"
+        "url": "https://images.unsplash.com/photo-1760548814600-2ca1a3f70c81?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGlzbGFuZCUyMGJvYXR8ZW58MHx8fHwxNzc3NTQ1NDEzfDA&ixlib=rb-4.1.0&q=85",
+        "category": "empty_booking",
+        "description": "Boats anchored near lush islands under a blue sky, perfect for 'No Bookings Yet' empty state illustration background."
       },
       {
-        "category": "destination_makassar",
-        "url": "https://images.pexels.com/photos/25538280/pexels-photo-25538280.jpeg",
-        "description": "Beautiful sunset silhouette of the 99 Domes Mosque with reflection on the water in Makassar",
-        "alt_text": "Masjid 99 Kubah Makassar saat matahari terbenam"
+        "url": "https://images.unsplash.com/photo-1631768689870-433ccc435658?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxvY2VhbiUyMHdhdmVzJTIwYWVyaWFsJTIwdmlld3xlbnwwfHx8fDE3Nzc1NDU0MTN8MA&ixlib=rb-4.1.0&q=85",
+        "category": "empty_wishlist",
+        "description": "Aerial view of sandy beach with waves, great for 'Wishlist Empty' imagery."
+      }
+    ],
+    "avatars": [
+      {
+        "url": "https://images.pexels.com/photos/12319501/pexels-photo-12319501.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "operator_avatar",
+        "description": "Asian professional avatar male"
       },
       {
-        "category": "activity_diving",
-        "url": "https://images.pexels.com/photos/10769610/pexels-photo-10769610.jpeg",
-        "description": "Professional diver exploring colorful coral reefs",
-        "alt_text": "Penyelaman terumbu karang di Sulawesi Selatan"
-      },
-      {
-        "category": "activity_hotel",
-        "url": "https://images.pexels.com/photos/8547164/pexels-photo-8547164.jpeg",
-        "description": "A tropical resort featuring a modern building and palm trees",
-        "alt_text": "Resor tropis dan penginapan di Sulawesi"
-      },
-      {
-        "category": "destination_spermonde",
-        "url": "https://images.unsplash.com/photo-1691849793899-ac59a3bdc08d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwzfHx0cm9waWNhbCUyMGlzbGFuZCUyMG9jZWFuJTIwYWVyaWFsfGVufDB8fHx8MTc3NzU0MjA3N3ww&ixlib=rb-4.1.0&q=85",
-        "description": "An island in the middle of the ocean",
-        "alt_text": "Kepulauan Spermonde dari udara"
-      },
-      {
-        "category": "destination_takabonerate",
-        "url": "https://images.pexels.com/photos/13010777/pexels-photo-13010777.jpeg",
-        "description": "Colorful coral reef underwater with fish",
-        "alt_text": "Taman Nasional Taka Bonerate"
+        "url": "https://images.unsplash.com/photo-1758600587683-d86675a2f6e9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHwzfHxzbWlsaW5nJTIwYXNpYW4lMjBwcm9mZXNzaW9uYWwlMjBhdmF0YXJ8ZW58MHx8fHwxNzc3NTQ1NDE0fDA&ixlib=rb-4.1.0&q=85",
+        "category": "customer_avatar",
+        "description": "Smiling asian woman avatar"
       }
     ]
   },
-  "sections": [
-    {
-      "name": "Hero",
-      "description": "Full height (min-h-[80vh]) immersive section. Background image of tropical beach.",
-      "layout": "Flex column, centered content or left-aligned depending on image focal point. Add gradient overlay bg-black/40 to ensure text readability.",
-      "elements": [
-        "Headline (H1): 'Jelajahi Keajaiban Bahari Sulawesi Selatan'",
-        "Subheadline: 'Pesan tur, penyelaman, dan penginapan eksklusif di Makassar, Spermonde, dan Taka Bonerate.'",
-        "Search/CTA Bar: Glassmorphism bar with destination dropdown, date, and primary CTA button 'Cari Petualangan'"
-      ]
-    },
-    {
-      "name": "Destinasi Unggulan (Featured Destinations)",
-      "description": "Bento Grid layout displaying the top 3 regions.",
-      "layout": "Tetris Grid. 1 large card (Makassar) col-span-12 md:col-span-8 row-span-2. 2 smaller cards (Spermonde, Taka Bonerate).",
-      "elements": [
-        "Section Title: 'Surga Tropis Menanti Anda'",
-        "Destination Cards with background images, gradient overlay, and bottom-aligned text."
-      ]
-    },
-    {
-      "name": "Kategori Aktivitas (Activities)",
-      "description": "Horizontal scroll or 4-column grid for Tour, Diving, Snorkeling, Hotel.",
-      "layout": "Grid cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6.",
-      "elements": [
-        "Icons or small images for each category.",
-        "Minimalist card design with subtle hover lift (-translate-y-1)."
-      ]
-    },
-    {
-      "name": "Cara Kerja (How It Works)",
-      "description": "Step-by-step booking flow.",
-      "layout": "Grid cols-1 md:grid-cols-3 or flex column with connecting lines.",
-      "elements": [
-        "Steps: 1. Pilih Destinasi, 2. Pesan Aktivitas & Penginapan, 3. Nikmati Liburan.",
-        "Use generous padding (p-12) and large elegant numerals (font-serif text-6xl text-accent-coral/20)."
-      ]
-    },
-    {
-      "name": "Testimoni (Testimonials)",
-      "description": "Marquee strategy (The Editorial Ribbon).",
-      "layout": "Slow moving carousel of text reviews.",
-      "elements": [
-        "Text: Pale background (#F0EBE1), dark text. Very slow drift."
-      ]
-    },
-    {
-      "name": "Operator CTA (Partners)",
-      "description": "Section calling for local businesses to join.",
-      "layout": "Dark background (#0B1D2E) block for high contrast.",
-      "elements": [
-        "Title: 'Tingkatkan Bisnis Pariwisata Anda'",
-        "CTA Button: 'Bergabung Sebagai Mitra' (Accent Color)"
-      ]
-    },
-    {
-      "name": "Footer & Newsletter",
-      "description": "Massive footer with newsletter signup.",
-      "layout": "Grid layout. Massive 'BahariTrip' logo/text at the bottom.",
-      "elements": [
-        "Newsletter input: Shadcn input styled with rounded edges.",
-        "Links: Tentang Kami, Destinasi, Syarat & Ketentuan."
-      ]
-    }
-  ],
-  "technical_instructions": {
-    "icons": "Use @phosphor-icons/react (Duotone weight) for elegant travel vibe.",
-    "animations": "Use Framer Motion for scroll-triggered fades. Use Lenis for smooth scrolling.",
-    "accessibility": "Ensure all text over images has sufficient contrast or text-shadow. Use data-testid on all interactive elements (e.g., data-testid='cta-search-button').",
-    "html_tags": "Prefer native HTML elements with Tailwind classes for layout to maintain flexibility, use Shadcn for complex interactive components like DatePicker or Select.",
-    "shadcn_customization": "Roundness: rounded-2xl. Strip default borders on cards if using solid backgrounds. Avoid generic card components for the Bento Grid."
-  }
+  "testing_requirements": {
+    "attributes": "All interactive elements MUST include data-testid attribute formatted as kebab-case, role-based. Example: data-testid='booking-submit-button'"
+  },
+  "instructions_to_main_agent": [
+    "Use standard Tailwind classes, strictly mapped from this JSON.",
+    "Implement Shadcn components but override their default borders, radii, and fonts according to shadcn_customizations.",
+    "Ensure the sidebar uses Dark Navy (#0B1D2E) to ground the design, while the main content area remains light and earthy.",
+    "Use Playfair Display solely for prominent headings (e.g., page titles, modal headers). Use Outfit for all functional UI text.",
+    "Do not use generic green/red for status badges; stick to the customized status colors provided in this document.",
+    "Never use placeholder image services like via.placeholder.com. ONLY use the provided media_urls."
+  ]
 }
