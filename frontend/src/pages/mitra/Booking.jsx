@@ -1,4 +1,5 @@
 import { Search, Download } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import {
   DashboardLayout,
   Card,
@@ -16,7 +17,7 @@ const tabs = [
   { v: "completed", l: "Selesai" },
 ];
 
-const Table = ({ items }) => (
+const Table = ({ items, onRowClick }) => (
   <Card className="p-0 overflow-hidden">
     <table className="w-full text-sm">
       <thead className="bg-[#FAF8F5] border-b border-[#E5DCC5]">
@@ -36,6 +37,7 @@ const Table = ({ items }) => (
           <tr
             key={b.id}
             data-testid={`booking-row-${b.id}`}
+            onClick={() => onRowClick(b.id)}
             className="border-b border-[#E5DCC5] last:border-b-0 hover:bg-[#F0EBE1]/40 transition-colors cursor-pointer"
           >
             <td className="px-6 py-4 font-medium text-[#0A1929]">{b.id}</td>
@@ -55,8 +57,10 @@ const Table = ({ items }) => (
 );
 
 export default function MitraBooking() {
+  const navigate = useNavigate();
   const filter = (v) =>
     v === "all" ? operatorBookings : operatorBookings.filter((b) => b.status === v);
+  const goDetail = (id) => navigate(`/dashboard/mitra/booking/${id}`);
 
   return (
     <DashboardLayout
@@ -106,7 +110,7 @@ export default function MitraBooking() {
 
         {tabs.map((t) => (
           <TabsContent key={t.v} value={t.v}>
-            <Table items={filter(t.v)} />
+            <Table items={filter(t.v)} onRowClick={goDetail} />
           </TabsContent>
         ))}
       </Tabs>

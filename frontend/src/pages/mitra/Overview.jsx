@@ -1,4 +1,5 @@
 import { TrendingUp, ArrowRight, MoreVertical } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import {
   DashboardLayout,
   Card,
@@ -58,6 +59,7 @@ const RevenueChart = () => {
 };
 
 export default function MitraOverview() {
+  const navigate = useNavigate();
   return (
     <DashboardLayout
       role="mitra"
@@ -71,6 +73,7 @@ export default function MitraOverview() {
         actions={
           <button
             data-testid="new-product-btn"
+            onClick={() => navigate("/dashboard/mitra/produk/baru")}
             className="bg-[#005F73] hover:bg-[#0A9396] text-white rounded-full px-5 py-2.5 text-sm font-medium flex items-center gap-2 transition-colors"
           >
             Tambah Produk
@@ -147,7 +150,8 @@ export default function MitraOverview() {
             {operatorBookings.slice(0, 5).map((b) => (
               <tr
                 key={b.id}
-                className="border-b border-[#E5DCC5] last:border-b-0 hover:bg-[#F0EBE1]/40 transition-colors"
+                onClick={() => navigate(`/dashboard/mitra/booking/${b.id}`)}
+                className="border-b border-[#E5DCC5] last:border-b-0 hover:bg-[#F0EBE1]/40 transition-colors cursor-pointer"
                 data-testid={`overview-booking-${b.id}`}
               >
                 <td className="px-6 py-4 font-medium text-[#0A1929]">{b.id}</td>

@@ -1,4 +1,5 @@
-import { Plus, Search, Filter, MoreVertical } from "lucide-react";
+import { Plus, Search, Filter, MoreVertical, Pencil } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import {
   DashboardLayout,
   Card,
@@ -9,6 +10,7 @@ import { mitraNav } from "./nav";
 import { operatorProducts, STATUSES } from "../../lib/mockData";
 
 export default function MitraProduk() {
+  const navigate = useNavigate();
   return (
     <DashboardLayout
       role="mitra"
@@ -22,6 +24,7 @@ export default function MitraProduk() {
         actions={
           <button
             data-testid="add-product-btn"
+            onClick={() => navigate("/dashboard/mitra/produk/baru")}
             className="bg-[#005F73] hover:bg-[#0A9396] text-white rounded-full px-5 py-2.5 text-sm font-medium flex items-center gap-2 transition-colors"
           >
             <Plus size={14} /> Produk baru
@@ -100,6 +103,13 @@ export default function MitraProduk() {
                   <StatusBadge status={p.status} statuses={STATUSES} />
                 </td>
                 <td className="px-6 py-4 text-right">
+                  <button
+                    data-testid={`product-edit-${p.id}`}
+                    onClick={() => navigate(`/dashboard/mitra/produk/${p.id}/edit`)}
+                    className="inline-flex items-center gap-1.5 text-xs font-medium text-[#005F73] hover:bg-[#FAF8F5] rounded-full px-3 py-1.5 transition-colors mr-1"
+                  >
+                    <Pencil size={12} /> Edit
+                  </button>
                   <button
                     data-testid={`product-actions-${p.id}`}
                     className="p-1.5 hover:bg-[#FAF8F5] rounded-full"

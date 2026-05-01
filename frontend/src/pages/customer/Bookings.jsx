@@ -1,5 +1,5 @@
 import { CalendarDays, MapPin, Users, ChevronRight, Inbox, Heart, Star } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   DashboardLayout,
   Card,
@@ -18,10 +18,11 @@ const filterByTab = (tab) => {
   return customerBookings;
 };
 
-const BookingCard = ({ b }) => (
+const BookingCard = ({ b, onClick }) => (
   <Card
     data-testid={`booking-card-${b.id}`}
-    className="p-0 overflow-hidden hover:shadow-md transition-shadow"
+    onClick={onClick}
+    className="p-0 overflow-hidden hover:shadow-md transition-shadow cursor-pointer"
   >
     <div className="flex flex-col md:flex-row">
       <div className="md:w-56 h-48 md:h-auto shrink-0 relative">
@@ -69,6 +70,7 @@ const BookingCard = ({ b }) => (
 );
 
 export default function CustomerBookings() {
+  const navigate = useNavigate();
   return (
     <DashboardLayout
       role="customer"
@@ -133,7 +135,13 @@ export default function CustomerBookings() {
                   description="Saatnya menjelajah Wakatobi. Lihat destinasi dan paket favorit kami."
                 />
               ) : (
-                items.map((b) => <BookingCard key={b.id} b={b} />)
+                items.map((b) => (
+                  <BookingCard
+                    key={b.id}
+                    b={b}
+                    onClick={() => navigate(`/dashboard/customer/booking/${b.id}`)}
+                  />
+                ))
               )}
             </TabsContent>
           );

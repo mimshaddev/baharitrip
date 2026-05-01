@@ -1,4 +1,5 @@
 import { Search, Download, Filter } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import {
   DashboardLayout,
   Card,
@@ -9,6 +10,7 @@ import { adminNav } from "./nav";
 import { adminBookings, STATUSES } from "../../lib/mockData";
 
 export default function AdminBooking() {
+  const navigate = useNavigate();
   return (
     <DashboardLayout
       role="admin"
@@ -91,6 +93,7 @@ export default function AdminBooking() {
               <tr
                 key={b.id}
                 data-testid={`admin-booking-${b.id}`}
+                onClick={() => navigate(`/dashboard/admin/booking/${b.id}`)}
                 className="border-b border-[#E5DCC5] last:border-b-0 hover:bg-[#F0EBE1]/40 transition-colors cursor-pointer"
               >
                 <td className="px-6 py-4 font-medium text-[#0A1929]">{b.id}</td>
