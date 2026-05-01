@@ -1,64 +1,74 @@
 # BahariTrip — Product Requirements Document
 
 ## Original Problem Statement
-"Build me the landing page" — for **BahariTrip**, a Ruby on Rails marine tourism booking platform serving South Sulawesi, Indonesia (Makassar, Spermonde Islands, Taka Bonerate). Books tours, diving, snorkeling, and hotels.
-
-Subsequent request: define UI/UX guidelines for the dashboard / backend side of the project (Customer, Operator, Admin roles).
+"Build me the landing page" untuk **BahariTrip** — platform booking wisata bahari Indonesia. Saat ini fokus di Wakatobi, Sulawesi Tenggara, target wisatawan nasional. Backend Rails dikerjakan oleh user di luar Emergent (opsi C — Rails not supported di Emergent).
 
 ## Stack
-- Frontend: React 19 + Tailwind + Shadcn/UI (in /app/frontend)
-- Backend (existing, external — owned by user): Ruby on Rails 7.2 + PostgreSQL + ActiveAdmin + Devise + Pundit
-- The /app FastAPI+MongoDB template backend is **unused** for this task
+- Frontend: React 19 + Tailwind + Shadcn/UI
+- Backend Rails 7.2: dikerjakan terpisah oleh user (di luar Emergent)
+- /app FastAPI+MongoDB template tidak digunakan
 
-## User Personas
-- **Tamu / Customer** — books tours, diving, accommodation
-- **Operator** — local tour/dive/hotel providers managing listings & schedules
-- **Admin** — platform managers overseeing users, payments, content
+## What's Been Implemented
 
-## What's Been Implemented (2025-12)
 ### Public Landing Page (DONE)
-- Single-page React landing at `/` (Indonesian content)
-- Sections: Navbar, Hero with search bar + stats, Featured Destinations bento (Makassar, Spermonde, Taka Bonerate), Activities grid (Tur, Diving, Snorkeling, Hotel), How It Works (3 steps), Testimonials marquee, Operator/Mitra CTA, Footer with newsletter
-- Brand: Organic & Earthy palette — teal #005F73, coral #E05D36, sand #E9D8A6, cream #FAF8F5, navy #0B1D2E
-- Typography: Playfair Display (headings) + Outfit (body)
-- All interactive elements have data-testid attributes
-- Files: `/app/frontend/src/App.js`, `/app/frontend/src/components/landing/*.jsx`, `/app/frontend/src/index.css`
-- Verified via screenshot — renders correctly
+- `/` — Hero, Destinasi (Wangi-Wangi/Tomia/Hoga), Aktivitas, Cara Kerja, Testimoni, Mitra CTA, Footer + Newsletter
+- Konten Bahasa Indonesia, fokus Wakatobi
+- Brand "Organic & Earthy": teal #005F73, coral #E05D36, sand #E9D8A6
+- Typography: **Bricolage Grotesque** (heading) + **Outfit** (body) — sans-serif modern editorial
+- Files: `/app/frontend/src/components/landing/*.jsx`
 
-### Dashboard Design Guidelines (DONE — blueprint only)
+### Dashboard UI — Customer / Mitra / Admin (DONE — mock data)
+Routes:
+- `/dashboard` — Role selector demo (3 cards)
+- `/dashboard/customer/booking|wishlist|profil` — Customer dashboard
+- `/dashboard/mitra/overview|produk|jadwal|booking` — Mitra/Operator dashboard
+- `/dashboard/admin/overview|mitra|booking|pembayaran` — Admin panel
+
+Komponen utama:
+- `/app/frontend/src/components/dashboard/` — Sidebar (navy), Topbar (role switcher), DashboardLayout, KpiCard, StatusBadge, EmptyState, PageHeader
+- Mock data: `/app/frontend/src/lib/mockData.js`
+- Pages: `/app/frontend/src/pages/{customer,mitra,admin}/*.jsx`
+
+Halaman fungsional:
+- **Customer**: Booking dengan tab status + KPI cards, Wishlist grid, Profile form
+- **Mitra**: Overview dengan KPI + revenue bar chart + booking table, Produk dengan filter table, Jadwal kalender Januari 2026, Booking dengan tab filter
+- **Admin**: Platform overview dengan GMV chart + persetujuan antrean + top mitra + activity log, Mitra approval dengan dialog, Booking oversight, Pembayaran/payout dengan tabs
+
+Komponen Shadcn dipakai: Tabs, Dialog, DropdownMenu, Avatar, Sheet (mobile sidebar), Toast (sonner)
+
+### Dashboard Design Guidelines
 - File: `/app/dashboard_design_guidelines.json`
-- Covers all three dashboards (Customer, Operator, Admin), shadcn customizations, color tokens, typography scale, sidebar/topbar/table/form patterns, status badge palette derived from brand colors
-- **NOT implemented** — user explicitly chose to stop at design blueprint
+
+## Mocked / Not Working
+- **All dashboard data** — array statis dari `mockData.js`, tidak konek backend Rails
+- **Search bar hero, semua CTA "Pesan Sekarang/Masuk"** — UI only
+- **Newsletter form** — toast sukses saja, tidak kirim email
+- **Approve/Reject mitra** — toast saja, tidak update state
+- **Auth flow** — tidak ada, semua route dashboard public
 
 ## Backlog (Prioritized)
 
-### P0 — when user resumes
-- Implement Operator Dashboard (6 pages): Overview, Produk, Jadwal, Booking, Pesan, Statistik
-- Implement Customer Dashboard (4 pages): My Bookings, Wishlist, Reviews, Profile
-- Implement Admin Panel (4 pages): Overview, Users/Operators, Bookings, Payments+Reports
+### P0
+- Integrasi semua dashboard ke API Rails (perlu base URL + auth token)
+- Auth flow (Devise di Rails atau Emergent Google Auth)
+- Hero search functional (date picker, destination select)
 
 ### P1
-- Functional search bar on landing (filter destinations/categories)
-- Connect newsletter to actual email service (Resend / SendGrid)
-- Authentication flow (Devise on Rails or Emergent Google Auth on React)
-- Connect dashboards to real Rails API endpoints (CORS + JSON API on Rails side)
+- Halaman detail produk + flow booking lengkap
+- Form CRUD produk (multi-step) untuk mitra
+- Form review setelah booking selesai
+- Jadwal feri manual CRUD untuk admin
+- Newsletter actual (Resend/SendGrid)
+- Pesan/inbox real-time mitra-customer
 
 ### P2
-- Booking flow UI (date selection, guest count, payment via Midtrans)
-- Reviews & ratings UI on completed bookings
-- Operator approval workflow
-- Manual ferry schedules CRUD (admin)
-- Multi-language toggle (ID / EN)
-- SEO meta tags + Open Graph for landing
-- Analytics integration
-
-## Mocked / Not Working
-- **Newsletter form** — UI only, shows success toast, does NOT send email
-- **Hero search bar** — UI only, does NOT search
-- **All CTA buttons (Pesan Sekarang, Masuk, Bergabung Sebagai Mitra)** — UI only, no routing/auth
-- **Backend** — landing page is fully static; no Rails or FastAPI integration
+- Multi-language (ID/EN)
+- Detail booking modal/page dari list
+- File upload UI dengan drag & drop
+- Notifikasi real-time
+- Analytics tracking
 
 ## Next Action Items
-- Decide whether to implement the dashboards (frontend-only mock or wire to existing Rails backend)
-- Provide Rails API base URL + auth scheme if dashboard integration is desired
-- Decide newsletter email provider when ready to make signup functional
+- User implements Rails backend with matching API endpoints
+- Connect dashboards to Rails: provide REACT_APP_BACKEND_URL pointing to Rails domain
+- Decide auth strategy
